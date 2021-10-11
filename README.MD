@@ -1,7 +1,7 @@
 # Building a Spotify Music Recommender
 
 ## Basic Overview
-Music is an essential part of the college experience. Being the decicated person in charge of Djing for parties, finding the right songs to play is crucial in setting the tone for the night. As a result, it is difficult to gauge what songs our group of friends want to hear. To solve this problem, we built a machine learning model that could predict what songs our friends would like. 
+Music is an essential part of the college experience. Being the decicated person in charge of DJ-ing for parties, finding the right songs to play is crucial in setting the tone for the night. As a result, it is difficult to gauge what songs our group of friends want to hear. To solve this problem, we built a machine learning model that could predict what songs our friends would like. 
 
 ## Data Preparation
 We made a collaborative Spotify playlist in which our friends added all their favorite songs that they would want to hear at a party. These songs are labelled as "good songs". 
@@ -20,15 +20,27 @@ Spotify's Developer Platform allows us access to each song's metadata (or audio 
 Official documentation: https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
 
 ## Goal of the project
-We want to train a model with the datasets we extracted to accurately recommend new songs for us to use at parties. We decided to test these 4 classifiers to determine which is the one is the most optimal for our model: 
-- SVM 
+We want to train a model with the datasets we extracted to accurately recommend new songs for us to use at parties. We decided to test these 4 classifiers to determine which one is the most optimal for our model: 
+
+- K Nearest Neighbors Classifier
 - Random Forest Classifier
 - Decision Tree Classifier
 - Logistic Regression 
 
-## Conclusion
-We ended up using RandomForestClassifier because it had the highest testing accuracy of ~85%
+![prediction_dataframe](https://i.imgur.com/GNpJnzp.png)
 
+The classifiers listed above are all classification algorithms that could determine a predictive binary outcome. We decided to use the Random Forest Classifier as our model for the final prediction since it had the highest testing accuracy of 91%.
+
+## Conclusion
+To put our model to use, we compiled a playlist of songs named TESTING that we think our friends would like. Obviously, we all have different taste in music, and so we hope this model could help us accurately determine what the right songs are.
+
+
+
+![prediction_dataframe](https://i.imgur.com/8V8r2ZQ.png)
+
+
+
+The end result is a dataframe of all the songs from TESTING that includes a column named "prediction" which returns a binary value where 1 means the song is recommended, and 0 if not. Creating this model allowed us to save time that would otherwise be spent on manually listening to each song and determining the right songs ourselves. However, music is incredibly subjetive and cannot always be measured in a quantifiable manner. We understand that the emotions and life depicted in music is much more complicated than mere numbers on a scale, but after listening to the recommended songs, we can confidently say that it fared up to our expecations. It may not be perfect, but it improved our quality of life by reducing the amount of time spent looking for songs without sacrificing music quality.
 
 
 
