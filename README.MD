@@ -1,7 +1,7 @@
 # Building a Spotify Music Recommender
 
 ## Basic Overview
-Music is an essential part of the college experience. Being the decicated person in charge of DJ-ing for parties, finding the right songs to play is crucial in setting the tone for the night. As a result, it is difficult to gauge what songs our group of friends want to hear. To solve this problem, we built a machine learning model that could predict what songs our friends would like. 
+Music is an essential part of the college experience. Being the decicated disk jockey for my friends at social events, finding the right songs to play is crucial in cultivating the atmosphere and experience as much as possible. As a result, it is difficult to gauge what songs our group of friends want to hear. To solve this problem, we decided to build a machine learning model that could accurately predict what songs our friends would like. 
 
 ## Data Preparation
 We made a collaborative Spotify playlist in which our friends added all their favorite songs that they would want to hear at a party. These songs are labelled as "good songs". 
@@ -40,7 +40,7 @@ To put our model to use, we compiled a playlist of songs named TESTING that we t
 
 
 
-The end result is a dataframe of all the songs from TESTING that includes a column named "prediction" which returns a binary value where 1 means the song is recommended, and 0 if not. Creating this model allowed us to save time that would otherwise be spent on manually listening to each song and determining the right songs ourselves. However, music is incredibly subjetive and cannot always be measured in a quantifiable manner. We understand that the emotions and life depicted in music is much more complicated than mere numbers on a scale, but after listening to the recommended songs, we can confidently say that it fared up to our expecations. It may not be perfect, but it improved our quality of life by reducing the amount of time spent looking for songs without sacrificing music quality.
+The end result is a dataframe of all the songs from TESTING that includes a column named "prediction" which returns a binary value where 1 means the song is recommended, and 0 if not. Creating this model allowed us to save time that would otherwise be spent on manually listening to each song and determining the right songs ourselves. However, music is incredibly subjective and cannot always be measured in a quantifiable manner. We understand that the emotions and life depicted in music is much more complicated than mere numbers on a scale, but after listening to the recommended songs, we can confidently say that it fared up to our expecations. It may not be perfect, but it improved our quality of life by reducing the amount of time spent looking for songs without sacrificing music quality.
 
 
 
